@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Explore from "~/pages/explore";
 import Home from "~/pages/home";
+import NotFound from "~/pages/not-found";
 import Notifications from "~/pages/notifications";
 
 const routes = createBrowserRouter([
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
     path: "/notification",
     element: <Notifications />,
   },
+  {
+    path: '*',
+    element: <NotFound />
+  }
 ]);
 
 export default routes;
