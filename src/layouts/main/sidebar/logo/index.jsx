@@ -13,4 +13,4 @@ export default function Logo() {
 			</Link>
 		</div>
 	)
-}
+} 
