@@ -7,7 +7,20 @@ const initialState = {
         fullName: './mehmetenfa',
         avatar: 'https://pbs.twimg.com/profile_images/1610177519495385090/gkpozyxi_400x400.jpg'
     },
-    accounts: []
+    accounts: [
+        {
+            id: 1,
+            username: 'mehmetenfa',
+            fullName: './mehmetenfa',
+            avatar: 'https://pbs.twimg.com/profile_images/1610177519495385090/gkpozyxi_400x400.jpg'
+        },
+        {
+            id: 2,
+            username: 'phocod',
+            fullName: 'Phocod',
+            avatar: 'https://pbs.twimg.com/profile_images/1675369390131298304/C7xT9ye5_400x400.jpg'
+        },
+    ]
 }
 
 const auth = createSlice({
