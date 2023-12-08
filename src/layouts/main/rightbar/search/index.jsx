@@ -1,13 +1,23 @@
-import {useState} from "react";
+import {useRef, useState} from "react";
+import {useClickAway} from 'react-use';
 
 export default function Search() {
    
-   const [query, setQuery] = useState('');
+   const [query, setQuery] = useState('')
+   const [focus, setFocus] = useState(false)
+   
+   const ref = useRef()
+   useClickAway(ref, () => {
+	  setFocus(false)
+   });
    
    return (
-	   <div className='min-h-[32px] h-[53px] mb-3 flex items-center'>
-		  <label className='h-[43px] rounded-full bg-[#202327] w-full relative border border-transparent group focus-within:bg-black focus-within:border-[#1d9bf0]'>
-			 <div className='w-[56px] h-full flex items-center justify-center absolute top-0 left-0'>
+	   <div
+		   ref={ref}
+		   className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 bg-black z-10"
+	   >
+		  <label className="h-[43px] rounded-full bg-[#202327] w-full relative group border border-transparent focus-within:bg-black focus-within:border-[#1d9bf0]">
+			 <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
 				<svg
 					viewBox="0 0 24 24"
 					height={18.75}
@@ -20,16 +30,19 @@ export default function Search() {
 				</svg>
 			 </div>
 			 <input
-				 type='text'
-				 className='w-full h-full bg-transparent rounded-full outline-none pl-[56px] text-[15px]'
+				 type="text"
+				 placeholder="Ara"
+				 className="w-full h-full bg-transparent placeholder-[#71767b] rounded-full outline-none pl-[56px] text-[15px]"
 				 value={query}
-				 onChange={e => setQuery((e.target.value))}
+				 onFocus={() => setFocus(true)}
+				 onChange={e => setQuery(e.target.value)}
 			 />
-			 {query && (
+			 {(query && focus) && (
 				 <button
-					 type='button'
+					 type="button"
 					 onClick={() => setQuery('')}
-					 className='w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] absolute right-3 top-1/2 -translate-y-1/2'>
+					 className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
+				 >
 					<svg viewBox="0 0 15 15" width={10} height={10}>
 					   <path
 						   fill="currentColor"
@@ -39,6 +52,14 @@ export default function Search() {
 				 </button>
 			 )}
 		  </label>
+		  {focus && (
+			  <div
+				  className="absolute w-[350px] top-full -left-px -translate-y-1 bg-black shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]">
+				 <p className="p-3 pt-5 text-[#71767b] leading-5">
+					Kişileri, listeleri veya anahtar kelimeleri aramayı dene
+				 </p>
+			  </div>
+		  )}
 	   </div>
    )
 }
