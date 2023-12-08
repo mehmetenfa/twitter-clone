@@ -181,3 +181,21 @@ export const mainMenu = [
       }
    },
 ];
+
+export const topics = [
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },
+]
