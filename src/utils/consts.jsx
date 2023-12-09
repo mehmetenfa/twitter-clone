@@ -198,4 +198,96 @@ export const topics = [
       },
       postCount: 15663
    },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },{
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },{
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },{
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'tag',
+         value: 'dilanpolat'
+      }
+   },
+   {
+      title: 'Turkiye tarihinde gundemde',
+      topic: {
+         type: 'query',
+         value: 'Starlink'
+      },
+      postCount: 15663
+   },
+   
+   
+   
+   
+   
 ]
